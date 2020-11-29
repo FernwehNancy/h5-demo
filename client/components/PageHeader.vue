@@ -10,30 +10,30 @@
       </div>
       <div class="user-wrapper">
         <slot name="right-slot"></slot>
-        <!-- <userHeadBtn/> -->
+        <userHeadBtn/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import userHeadBtn from '@/components/UserHeadBtn'
+import userHeadBtn from '@/components/UserHeadBtn'
 export default {
   props: {
     fullWidth: Boolean
   },
   components: {
-    // userHeadBtn
+    userHeadBtn
   },
   methods: {
     goHome () {
       // 已登录就去工作台，
       // 没登陆就去首页
-      if (this.$store.state.user.access_token) {
-        this.$router.push({ name: 'Home' })
-      } else {
-        this.$router.push({ name: 'Home' })
-      }
+      // if (this.$store.state.user.access_token) {
+      //   this.$router.push({ name: 'Home' })
+      // } else {
+      //   this.$router.push({ name: 'Home' })
+      // }
     }
   }
 }

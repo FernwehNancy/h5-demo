@@ -7,8 +7,21 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/Layout.vue')
-    // redirect: { name: 'Home' }
+    component: () => import('@/views/Layout'),
+    redirect: { name: 'Home' },
+    children: [
+      {
+        path: 'home',
+        name: 'Home',
+        component: () => import('@/views/home/Index'),
+        redirect: { name: 'pageList' },
+        children: [{
+          path: 'page-list',
+          name: 'pageList',
+          component: () => import('@/views/home/PageList')
+        }]
+      }
+    ]
   }
 ]
 

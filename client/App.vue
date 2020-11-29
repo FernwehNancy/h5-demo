@@ -10,6 +10,10 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  position: relative;
+  height: 100%;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
